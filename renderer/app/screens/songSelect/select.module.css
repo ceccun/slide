@@ -1,0 +1,19 @@
+.chartSelect {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 256px;
+  padding-right: 256px;
+  height: 100vh;
+  box-sizing: border-box;
+}
