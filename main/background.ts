@@ -2,7 +2,6 @@ import path from 'path'
 import { app, ipcMain } from 'electron'
 import serve from 'electron-serve'
 import { createWindow } from './helpers'
-import { createRoutes } from './routes'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -24,7 +23,7 @@ if (isProd) {
   })
 
   if (isProd) {
-    await mainWindow.loadURL('app://./index')
+    await mainWindow.loadURL('app://./index.html')
   } else {
     const port = process.argv[2]
     await mainWindow.loadURL(`http://localhost:${port}/`)
@@ -36,4 +35,7 @@ app.on('window-all-closed', () => {
   app.quit()
 })
 
-createRoutes()
+
+ipcMain.on('message', async (event, arg) => {
+  event.reply('message', `${arg} World!`)
+})

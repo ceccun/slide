@@ -1,0 +1,13 @@
+[{
+    "type": "tap",
+    "time": 2,
+    "position": -15
+},
+{
+    "type": "hold",
+    "time": 5,
+    "position": [{
+        "time": 6,
+        "position": 16
+    }]
+}]

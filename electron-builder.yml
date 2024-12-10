@@ -1,6 +1,6 @@
-appId: com.ceccun.slide
-productName: Slide
-copyright: Ceccun 2024
+appId: com.example.nextron
+productName: My Nextron App
+copyright: Copyright © 2018 Yoshihide Shiono
 directories:
   output: dist
   buildResources: resources
